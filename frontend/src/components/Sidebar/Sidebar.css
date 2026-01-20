@@ -1,0 +1,92 @@
+.home-sidebar {
+  background: #141a22;
+  color: #fff;
+  padding: 16px;
+  min-width: 240px;
+}
+.home-sidebar .brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.home-sidebar .brand-logo {
+  width: 28px;
+  height: 28px;
+}
+.home-sidebar .brand-name {
+  color: white;
+  font-weight: 800;
+}
+.home-nav {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  gap: 12px;
+}
+.home-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.home-link.active,
+.home-link:hover {
+  color: #fff;
+  background: #1f2937;
+}
+
+/* Logout button container and styles */
+.home-actions { margin-top: 24px; }
+.logout-btn {
+  color: #fff;
+  background: #d92d20;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.logout-btn:hover { filter: brightness(1.05); }
+
+/* Responsive: Sidebar becomes a top bar */
+@media (max-width: 960px) {
+  .home-sidebar {
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    padding: 12px 16px;
+    border-bottom: 1px solid #233044;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .home-sidebar .brand {
+    margin-bottom: 0;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  .home-nav {
+    margin-top: 0;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+  .home-link {
+    white-space: nowrap;
+  }
+  .home-actions {
+    margin-top: 0;
+    flex: 0 0 auto;
+  }
+  .logout-btn { padding: 6px 10px; }
+}
